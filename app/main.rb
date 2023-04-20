@@ -19,7 +19,7 @@ post '/trigger-unit-test' do
   tokens = gitlab_token.split(';')
   return [200, 'Token not matched'] unless tokens[0] == ENV['TOKEN']
 
-  res = HTTParty.post("https://git.kelvinchin.cc/api/v4/projects/#{project_id}/trigger/pipeline",
+  res = HTTParty.post("https://#{ENV['ENDPOINT']}/api/v4/projects/#{project_id}/trigger/pipeline",
                       body: { ref: 'unit-test', token: tokens[1] }.to_json,
                       headers: { 'Content-Type' => 'application/json' })
   return [
