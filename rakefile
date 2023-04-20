@@ -1,0 +1,16 @@
+# frozen_string_literal: true
+
+desc 'Start development server'
+task :dev do
+  exec 'bundle exec ruby ./app/main.rb'
+end
+
+desc 'Start production server'
+task :start do
+  exec 'bundle exec ruby ./app/main.rb -e production'
+end
+
+desc 'Build Docker image'
+task :build do
+  exec 'docker build -t kelvinchin12070811/gitlab-pipeline-trigger .'
+end
