@@ -15,3 +15,5 @@ gem "http", "~> 5.1"
 gem "webrick", "~> 1.8"
 
 gem "httparty", "~> 0.21.0"
+
+gem "rubocop", "~> 1.50", :group => :dev

@@ -175,10 +175,11 @@ DEPENDENCIES
   http (~> 5.1)
   httparty (~> 0.21.0)
   puma (~> 6.2)
+  rubocop
   sinatra (~> 3.0)
   solargraph (~> 0.49.0)
   thin (~> 1.8)
   webrick (~> 1.8)
 
 BUNDLED WITH
-   2.4.10
+   2.4.12
