@@ -1,12 +1,10 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.8.4)
-      public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
-    async (1.31.0)
+    async (2.5.0)
       console (~> 1.10)
-      nio4r (~> 2.3)
+      io-event (~> 1.1)
       timers (~> 4.1)
     async-container (0.16.12)
       async
@@ -32,8 +30,6 @@ GEM
       fiber-local
     daemons (1.4.1)
     diff-lcs (1.5.0)
-    domain_name (0.5.20190701)
-      unf (>= 0.0.5, < 1.0.0)
     e2mmap (0.1.0)
     eventmachine (1.2.7)
     falcon (0.42.3)
@@ -49,31 +45,17 @@ GEM
       process-metrics (~> 0.2.0)
       protocol-rack (~> 0.1)
       samovar (~> 2.1)
-    ffi (1.15.5)
-    ffi-compiler (1.0.1)
-      ffi (>= 1.0.0)
-      rake
     fiber-local (1.0.0)
-    http (5.1.1)
-      addressable (~> 2.8)
-      http-cookie (~> 1.0)
-      http-form_data (~> 2.2)
-      llhttp-ffi (~> 0.4.0)
-    http-cookie (1.0.5)
-      domain_name (~> 0.5)
-    http-form_data (2.3.0)
     httparty (0.21.0)
       mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
+    io-event (1.1.7)
     jaro_winkler (1.5.4)
     json (2.6.3)
     kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
-    llhttp-ffi (0.4.0)
-      ffi-compiler (~> 1.0)
-      rake (~> 13.0)
     localhost (1.1.10)
     mapping (1.1.1)
     mini_mime (1.1.2)
@@ -84,8 +66,8 @@ GEM
     nokogiri (1.14.3-arm64-darwin)
       racc (~> 1.4)
     openssl (3.1.0)
-    parallel (1.22.1)
-    parser (3.2.2.0)
+    parallel (1.23.0)
+    parser (3.2.2.1)
       ast (~> 2.4.1)
     process-metrics (0.2.1)
       console (~> 1.8)
@@ -100,15 +82,13 @@ GEM
     protocol-rack (0.2.4)
       protocol-http (~> 0.23)
       rack (>= 1.0)
-    public_suffix (5.0.1)
     puma (6.2.2)
       nio4r (~> 2.0)
     racc (1.6.2)
-    rack (2.2.6.4)
+    rack (2.2.7)
     rack-protection (3.0.6)
       rack
     rainbow (3.1.1)
-    rake (13.0.6)
     rbs (2.8.4)
     regexp_parser (2.8.0)
     reverse_markdown (2.1.1)
@@ -160,9 +140,6 @@ GEM
     tilt (2.1.0)
     timers (4.3.5)
     traces (0.9.1)
-    unf (0.1.4)
-      unf_ext
-    unf_ext (0.0.8.2)
     unicode-display_width (2.4.2)
     webrick (1.8.1)
     yard (0.9.34)
@@ -172,14 +149,13 @@ PLATFORMS
 
 DEPENDENCIES
   falcon (~> 0.42.3)
-  http (~> 5.1)
   httparty (~> 0.21.0)
   puma (~> 6.2)
-  rubocop
+  rubocop (~> 1.50)
   sinatra (~> 3.0)
   solargraph (~> 0.49.0)
   thin (~> 1.8)
   webrick (~> 1.8)
 
 BUNDLED WITH
-   2.4.12
+   2.4.10

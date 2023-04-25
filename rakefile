@@ -14,3 +14,9 @@ desc 'Build Docker image'
 task :build do
   exec 'docker build -t kelvinchin12070811/gitlab-pipeline-trigger .'
 end
+
+desc 'Setup bundle config'
+task :bundle_env do
+  system 'bundle config set --local path vendor'
+  system 'bundle config set --local build.ffi --disable-system-ffi'
+end
